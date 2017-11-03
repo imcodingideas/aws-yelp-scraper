@@ -8,15 +8,16 @@ module.exports.scrape = (event, context, callback) => {
     // parse the page
     .then(page => parsePage(page))
     //save to database
-    .then(yelpData => saveRatingsToDb(yelpData, event));
-
-  const response = {
-    statusCode: 200,
-    body: JSON.stringify({
-      message: "Go Serverless v1.0! Your function executed successfully!",
-      input: event
-    })
-  };
-
-  callback(null, response);
+    .then(yelpData => saveRatingsToDb(yelpData, event))
+    .then(() =>
+      callback(null, {
+        statusCode: 200,
+        body: JSON.stringify({
+          message: `Scraped ${event}`
+        })
+      })
+    )
+    .catch(error =>
+      callback(new Error(`Error Scraping ${event}: ${JSON.stringify(error)}`))
+    );
 };
