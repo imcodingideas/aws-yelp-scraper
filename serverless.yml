@@ -21,7 +21,7 @@ provider:
   environment:
     DYNAMODB_TABLE: yelp-ratings
   iamRoleStatements:
-    - Effect: "Allow"
+    - Effect: Allow
       Action:
         - dynamodb:Query
         - dynamodb:Scan
