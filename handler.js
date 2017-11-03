@@ -1,6 +1,11 @@
 "use strict";
 
-const { getPage, parsePage, saveRatingsToDb } = require("./utils");
+const {
+  getPage,
+  parsePage,
+  saveRatingsToDb,
+  deployScrapers
+} = require("./utils");
 
 module.exports.scrape = (event, context, callback) => {
   // fetch the page
@@ -20,4 +25,17 @@ module.exports.scrape = (event, context, callback) => {
     .catch(error =>
       callback(new Error(`Error Scraping ${event}: ${JSON.stringify(error)}`))
     );
+};
+
+module.exports.launch_scrapers = (event, context, callback) => {
+  const fakeDatabaseResults = [
+    "reforma-255-hermosillo",
+    "el-leñador-hermosillo",
+    "mochomos-hermosillo",
+    "restaurante-el-che-parrilla-argentina-hermosillo"
+  ];
+
+  fakeDatabaseResults.forEach(businessName => {
+    deployScrapers(businessName);
+  });
 };
