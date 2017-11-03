@@ -2,11 +2,9 @@
 
 const { getPage, parsePage, saveRatingsToDb } = require("./utils");
 
-module.exports.hello = (event, context, callback) => {
+module.exports.scrape = (event, context, callback) => {
   // fetch the page
-
-  // parse the page
-
+  getPage(event).then(page => parsePage(page));
   //save to database
 
   const response = {
