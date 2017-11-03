@@ -11,7 +11,11 @@ module.exports = page => {
       .trim()
       .split(" ")[0];
 
-    console.log(rating, reviewCount);
+    const yelpData = {
+      rating,
+      reviewCount
+    };
+    return Promise.resolve(yelpData);
   } catch (error) {
     return Promise.reject(`Error Parsing Page ${JSON.stringify(error)}`);
   }
