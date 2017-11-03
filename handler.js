@@ -8,7 +8,7 @@ module.exports.scrape = (event, context, callback) => {
     // parse the page
     .then(page => parsePage(page))
     //save to database
-    .then(yelpData => saveRatingsToDb(yelpData));
+    .then(yelpData => saveRatingsToDb(yelpData, event));
 
   const response = {
     statusCode: 200,
