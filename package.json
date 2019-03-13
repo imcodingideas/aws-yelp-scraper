@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node launch.js"
   },
-  "keywords": [],
+  "keywords": [
+
+  ],
   "author": "Joseph Chambers",
   "license": "ISC",
   "dependencies": {
@@ -14,7 +16,7 @@
     "cheerio": "^1.0.0-rc.2",
     "request": "^2.83.0",
     "request-promise": "^4.2.2",
-    "uuid": "^3.1.0"
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
     "serverless-offline-scheduler": "^0.3.3"
