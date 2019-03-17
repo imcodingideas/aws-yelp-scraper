@@ -15,7 +15,7 @@
     "aws-sdk": "^2.143.0",
     "cheerio": "^1.0.0-rc.2",
     "request": "^2.83.0",
-    "request-promise": "^4.2.2",
+    "request-promise": "^4.2.4",
     "uuid": "^3.3.2"
   },
   "devDependencies": {
