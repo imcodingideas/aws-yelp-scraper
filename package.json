@@ -14,7 +14,7 @@
     "cheerio": "^1.0.0-rc.2",
     "request": "^2.88.2",
     "request-promise": "^4.2.2",
-    "uuid": "^3.3.3"
+    "uuid": "^3.4.0"
   },
   "devDependencies": {
     "serverless-offline-scheduler": "^0.3.8"
