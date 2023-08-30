@@ -10,7 +10,7 @@
   "author": "Joseph Chambers",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.786.0",
+    "aws-sdk": "^2.1447.0",
     "cheerio": "^1.0.0-rc.2",
     "request": "^2.88.2",
     "request-promise": "^4.2.2",
